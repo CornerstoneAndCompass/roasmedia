@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | ROAS Media Portfolio &amp; Process</title>
+  <meta name="description" content="See how ROAS Media scales brands profitably. Our simple process: audit, assess, benchmark, evaluate, and scale. Over $250M in ad revenue generated.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="https://roasmedia.com/wp-content/uploads/2025/09/Roas-Logo.png">
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .portfolio-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+    .portfolio-card:hover {
+      border-color: var(--border-green);
+      transform: translateY(-4px);
+    }
+    .portfolio-card .card-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(90, 246, 124, 0.08);
+      border: 1px solid rgba(90, 246, 124, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 24px;
+    }
+    .portfolio-card h3 {
+      font-size: 1.125rem;
+      margin-bottom: 12px;
+    }
+    .portfolio-card p {
+      color: var(--text-light);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+    .process-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 60px auto 0;
+    }
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 32px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary-green), rgba(90, 246, 124, 0.1));
+    }
+    .timeline-step {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .timeline-step:last-child { margin-bottom: 0; }
+    .timeline-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--dark-card);
+      border: 2px solid var(--primary-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-green);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .timeline-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      padding-top: 8px;
+    }
+    .timeline-content p {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .brand-logos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .brand-logo-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      transition: var(--transition-smooth);
+    }
+    .brand-logo-card:hover {
+      border-color: var(--border-green);
+    }
+    .brand-logo-card img {
+      max-height: 36px;
+      max-width: 100px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+    .brand-logo-card:hover img { opacity: 1; }
+    @media (max-width: 768px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .brand-logos-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Roas-Logo.png" alt="ROAS Media"></a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="about.html">About <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="our-work.html" class="active">Our Work</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="services.html">Services <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="services/meta-ads.html">Facebook &amp; Instagram Ads</a>
+            <a href="services/google-ads.html">Google Advertising</a>
+            <a href="services/tiktok-ads.html">TikTok Ads</a>
+            <a href="services/creative-services.html">Creative Services</a>
+            <a href="services/analytics-consulting.html">Data-Analytics &amp; Consulting</a>
+          </div>
+        </div>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="calculator.html">ROAS Calculator</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <a href="audit.html" class="btn btn-primary btn-sm nav-cta desktop-only">Get Free Audit</a>
+      <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="calculator.html">ROAS Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="audit.html" class="btn btn-primary">Get Free Audit</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-header" style="padding-bottom:40px;">
+    <div class="container text-center">
+      <div class="fade-up">
+        <span class="eyebrow">Our Work</span>
+        <h1>Our Process Is <span class="green-text">Simple</span></h1>
+        <p class="section-subtitle" style="max-width:700px; margin:16px auto 0;">Finding the right agency partnership is one of the most important decisions for your brand's growth. We take it just as seriously as you do.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section style="padding:0 0 80px; background:var(--dark-bg);">
+    <div class="container">
+      <div class="process-timeline">
+        <div class="timeline-step fade-up">
+          <div class="timeline-number">1</div>
+          <div class="timeline-content">
+            <h3>Audit Your Current Advertising</h3>
+            <p>We conduct a deep-dive analysis of your existing ad accounts, funnel metrics, and creative performance to identify exactly where revenue is leaking and where the biggest opportunities live.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="timeline-number">2</div>
+          <div class="timeline-content">
+            <h3>Assess Your Desired KPIs</h3>
+            <p>We work with you to understand your growth targets, unit economics, and what success looks like for your brand - whether that's ROAS targets, revenue goals, or customer acquisition costs.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="timeline-number">3</div>
+          <div class="timeline-content">
+            <h3>Compare Against Industry Benchmarks</h3>
+            <p>With tens of millions in annual ad spend under management, we benchmark your performance against anonymized data from brands in your vertical to set realistic, ambitious targets.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="timeline-number">4</div>
+          <div class="timeline-content">
+            <h3>Evaluate Partnership Fit</h3>
+            <p>We believe the right partnership matters for both parties. We assess whether we can genuinely deliver the results you need - and if it's not the right fit, we'll tell you honestly.</p>
+          </div>
+        </div>
+        <div class="timeline-step fade-up">
+          <div class="timeline-number">5</div>
+          <div class="timeline-content">
+            <h3>Begin Scaling Profitably</h3>
+            <p>Once we're confident we can deliver, we move fast. Our team operates 7 days a week, optimizing your campaigns and scaling your ad spend while maintaining or improving profitability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO CATEGORIES -->
+  <section style="padding:80px 0; background:#0e0e0e; border-top:1px solid var(--border-subtle);">
+    <div class="container text-center">
+      <span class="eyebrow">Our Portfolio</span>
+      <h2>Brands We've Helped <span class="green-text">Scale</span></h2>
+      <p class="section-subtitle" style="margin:16px auto 0;">From scrappy startups to Fortune 500 companies, we've generated over $250M in trackable ad revenue across diverse industries.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card stagger-item">
+          <div class="card-icon">&#128132;</div>
+          <h3>Beauty &amp; Wellness</h3>
+          <p>Scaling DTC beauty brands across APAC, North America, and Europe with high-converting Meta and Google campaigns.</p>
+        </div>
+        <div class="portfolio-card stagger-item">
+          <div class="card-icon">&#128085;</div>
+          <h3>Fashion &amp; Fitness</h3>
+          <p>Driving customer acquisition and repeat purchases for fashion and fitness brands through full-funnel paid strategies.</p>
+        </div>
+        <div class="portfolio-card stagger-item">
+          <div class="card-icon">&#127758;</div>
+          <h3>Multinational Corporations</h3>
+          <p>Managing performance campaigns at scale for global enterprises like Netflix and Lenskart across multiple markets.</p>
+        </div>
+        <div class="portfolio-card stagger-item">
+          <div class="card-icon">&#127775;</div>
+          <h3>Shark Tank &amp; Celebrity Brands</h3>
+          <p>Helping entrepreneur-backed and celebrity brands capitalise on their momentum with data-driven advertising.</p>
+        </div>
+        <div class="portfolio-card stagger-item">
+          <div class="card-icon">&#128722;</div>
+          <h3>eCommerce &amp; DTC</h3>
+          <p>Our bread and butter. Scaling online stores from 5-figure to 7-figure monthly revenue through paid acquisition.</p>
+        </div>
+        <div class="portfolio-card stagger-item">
+          <div class="card-icon">&#128188;</div>
+          <h3>SaaS &amp; Subscriptions</h3>
+          <p>Optimising customer acquisition costs and lifetime value for subscription-based businesses and SaaS platforms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND LOGOS -->
+  <section style="padding:80px 0; background:var(--dark-bg);">
+    <div class="container text-center">
+      <span class="eyebrow">Trusted By</span>
+      <h2>From Startups to <span class="green-text">Fortune 500</span></h2>
+      <div class="brand-logos-grid">
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Netflix_2015_logo-1.png" alt="Netflix"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/lenskart_logo-1.png" alt="Lenskart"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Paypal-Melbourne-FF-Logo-optimied.webp" alt="PayPal"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Reckitt-logo-optimised.webp" alt="Reckitt"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/2560px-The_Economist_Logo-2-optimised.webp" alt="The Economist"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/TheraIce-Logo-White-optimised.webp" alt="TheraICE"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/TheFoxTan_Logo-1-1.png" alt="The Fox Tan"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/cariuma-logo.png" alt="Cariuma"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/emily-skye-fit-logo-1-1.png" alt="Emily Skye Fit"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/sand-cloud.svg" alt="Sand Cloud"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Nature-Baby.png" alt="Nature Baby"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/cadenshae-nz_myshopify_com_logo-2.png" alt="Cadenshae"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/SkinInc_Logo-white-1-1.png" alt="Skin Inc"></div>
+        <div class="brand-logo-card scale-in"><img src="https://roasmedia.com/wp-content/uploads/2025/09/headkandyprocom-2.png" alt="Headkandy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section style="padding:80px 0; background:#0e0e0e; border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="background:var(--dark-card); border:1px solid var(--border-subtle); border-radius:16px; padding:60px; max-width:800px; margin:0 auto; text-align:center;" class="fade-up">
+        <div style="color:#FFD700; font-size:1.125rem; letter-spacing:4px; margin-bottom:20px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote style="font-size:1.125rem; color:var(--text-light); line-height:1.8; font-style:italic; margin-bottom:24px;">"Their attention to detail during campaign planning and setup is unmatched. ROAS Media delivered results that exceeded our expectations across multiple markets."</blockquote>
+        <p style="font-weight:600;">Satya Sourabh</p>
+        <p style="color:var(--text-muted); font-size:0.875rem;">Netflix - Global Media Strategy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box fade-up">
+        <span class="eyebrow">Ready to Scale?</span>
+        <h2>Get Your Complimentary <span class="green-text">Growth Audit</span></h2>
+        <p>Receive custom growth forecasts and vertical-specific insights. No commitment, no fluff - just actionable strategy.</p>
+        <a href="audit.html" class="btn btn-primary btn-lg">Get Your Free Audit &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Roas-Logo.png" alt="ROAS Media"></a>
+          <p>Global performance marketing agency focused on Return On Ad Spend. Scaling brands profitably since 2017.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/roasmedia/" target="_blank" class="footer-social-link">in</a>
+            <a href="https://www.facebook.com/roasmedia" target="_blank" class="footer-social-link">f</a>
+            <a href="https://www.youtube.com/@roasmedia" target="_blank" class="footer-social-link">&#9654;</a>
+            <a href="https://www.instagram.com/roasmedia/" target="_blank" class="footer-social-link">ig</a>
+            <a href="https://www.tiktok.com/@roasmedia" target="_blank" class="footer-social-link">tk</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="our-work.html">Our Work</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="mailto:hr@roasmedia.com">Careers</a></div>
+        <div class="footer-col"><h4>Services</h4><a href="services/meta-ads.html">Meta Ads</a><a href="services/google-ads.html">Google Ads</a><a href="services/tiktok-ads.html">TikTok Ads</a><a href="services/creative-services.html">Creative</a><a href="services/analytics-consulting.html">Analytics</a></div>
+        <div class="footer-col footer-newsletter"><h4>Stay in the Loop</h4><p>Performance marketing tips delivered to your inbox.</p><form class="newsletter-form" onsubmit="event.preventDefault();alert('Thanks for subscribing!');"><input type="email" placeholder="Your email" required><button type="submit" class="btn btn-primary btn-sm">Subscribe</button></form></div>
+      </div>
+      <div class="footer-bottom">
+        <div><p>&copy; 2026 ROAS Media. All rights reserved.</p><div class="footer-locations"><span>USA</span><span>Australia</span><span>New Zealand</span><span>Singapore</span><span>Malaysia</span></div></div>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

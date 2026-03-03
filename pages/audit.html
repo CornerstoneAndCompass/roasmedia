@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Your Free Audit | ROAS Media</title>
+  <meta name="description" content="Get a free audit of your ad accounts. Discover the growth opportunities hiding in your Meta, Google, and TikTok campaigns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="https://roasmedia.com/wp-content/uploads/2025/09/Roas-Logo.png">
+  <style>
+    .audit-hero {
+      padding: 160px 0 80px;
+      background-image: url('https://roasmedia.com/wp-content/uploads/2025/09/Footer-CTA-Backgroundv2-1.webp');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .audit-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 100%);
+    }
+    .audit-hero .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .audit-hero-text h1 {
+      margin-bottom: 24px;
+    }
+    .audit-hero-text p {
+      color: var(--text-light);
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      max-width: 560px;
+    }
+    .audit-selling-points {
+      margin-top: 32px;
+    }
+    .audit-selling-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .audit-selling-points li .check {
+      color: var(--primary-green);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .audit-form-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 48px;
+    }
+    .audit-form-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .audit-form-card > p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 32px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--dark-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      color: var(--text-white);
+      font-size: 0.9375rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--primary-green);
+      outline: none;
+    }
+    .form-group input::placeholder {
+      color: var(--text-muted);
+    }
+    .form-group select {
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23888' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+    .form-group select option {
+      background: var(--dark-bg);
+      color: var(--text-white);
+    }
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 24px 0;
+    }
+    .form-checkbox input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: var(--primary-green);
+    }
+    .form-checkbox label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .audit-submit {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+    .form-privacy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      text-align: center;
+    }
+    .form-privacy a {
+      color: var(--primary-green);
+    }
+
+    /* Stats strip */
+    .audit-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-stat {
+      text-align: center;
+    }
+    .audit-stat .value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-green);
+      line-height: 1;
+    }
+    .audit-stat .label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* What you get */
+    .audit-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .audit-feature {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .audit-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: rgba(90,246,124,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .audit-feature h3 {
+      margin-bottom: 10px;
+      font-size: 1.0625rem;
+    }
+    .audit-feature p {
+      color: var(--text-light);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1024px) {
+      .audit-hero .container { grid-template-columns: 1fr; }
+      .audit-features { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .audit-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Roas-Logo.png" alt="ROAS Media"></a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Services <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="services/meta-ads.html">Facebook &amp; Instagram Ads</a>
+            <a href="services/google-ads.html">Google Advertising</a>
+            <a href="services/tiktok-ads.html">TikTok Ads</a>
+            <a href="services/creative-services.html">Creative Services</a>
+            <a href="services/analytics-consulting.html">Data-Analytics &amp; Consulting</a>
+          </div>
+        </div>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="calculator.html">ROAS Calculator</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <a href="audit.html" class="btn btn-primary btn-sm nav-cta desktop-only">Get Free Audit</a>
+      <button class="mobile-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav">
+    <a href="../index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="case-studies.html">Case Studies</a><a href="calculator.html">ROAS Calculator</a><a href="blog.html">Blog</a>
+    <a href="audit.html" class="btn btn-primary">Get Free Audit</a>
+  </nav>
+
+  <!-- HERO WITH FORM -->
+  <section class="audit-hero">
+    <div class="container">
+      <div class="audit-hero-text">
+        <span class="eyebrow">Free Audit</span>
+        <h1>We've Generated Over <span class="green-text">$250,000,000</span> in Trackable Ad Revenue</h1>
+        <p>Our global team operates 7 days a week, focused on your business growth and profitability goals beyond just ad management. Founded by former Facebook employee Rich Burns.</p>
+        <ul class="audit-selling-points">
+          <li><span class="check">&#10003;</span> Full account audit across Meta, Google, and TikTok</li>
+          <li><span class="check">&#10003;</span> Competitor benchmarking against brands in your niche</li>
+          <li><span class="check">&#10003;</span> Actionable recommendations you can implement immediately</li>
+          <li><span class="check">&#10003;</span> No obligation - just honest, expert analysis</li>
+        </ul>
+      </div>
+      <div class="audit-form-card">
+        <h2>Get Your <span class="green-text">Free Audit</span></h2>
+        <p>Fill in your details and we'll be in touch within 24 hours.</p>
+        <form onsubmit="event.preventDefault(); this.querySelector('.audit-submit').textContent='Thanks! We\'ll be in touch.'; this.querySelector('.audit-submit').disabled=true;">
+          <div class="form-group">
+            <label for="audit-name">Name *</label>
+            <input type="text" id="audit-name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="audit-email">Email *</label>
+            <input type="email" id="audit-email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="audit-website">Website *</label>
+            <input type="url" id="audit-website" placeholder="https://yourstore.com" required>
+          </div>
+          <div class="form-group">
+            <label for="audit-budget">Monthly Ad Budget *</label>
+            <select id="audit-budget" required>
+              <option value="" disabled selected>Select your monthly budget</option>
+              <option>Under $5,000</option>
+              <option>$5,000 - $15,000</option>
+              <option>$15,000 - $50,000</option>
+              <option>$50,000 - $100,000</option>
+              <option>$100,000+</option>
+            </select>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" id="audit-newsletter">
+            <label for="audit-newsletter">Yes, I'd also like to receive information about additional products or services</label>
+          </div>
+          <button type="submit" class="btn btn-primary audit-submit">Get My Free Audit &rarr;</button>
+          <p class="form-privacy">Information submitted through this form is subject to our <a href="#">Privacy Policy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section style="padding:0; background:var(--dark-bg);">
+    <div class="container">
+      <div class="audit-stats">
+        <div class="audit-stat"><div class="value">$250M+</div><div class="label">Ad Revenue Generated</div></div>
+        <div class="audit-stat"><div class="value">7/7</div><div class="label">Days a Week</div></div>
+        <div class="audit-stat"><div class="value">5</div><div class="label">Countries</div></div>
+        <div class="audit-stat"><div class="value">2017</div><div class="label">Founded</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section style="padding:80px 0; background:#0e0e0e;">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">What's Included</span>
+        <h2>Your Complimentary <span class="green-text">Performance Audit</span></h2>
+      </div>
+      <div class="audit-features">
+        <div class="audit-feature">
+          <div class="audit-feature-icon">&#128200;</div>
+          <h3>Account Structure Review</h3>
+          <p>We analyse your campaign architecture, audience segmentation, and budget allocation to identify inefficiencies that are costing you money.</p>
+        </div>
+        <div class="audit-feature">
+          <div class="audit-feature-icon">&#127919;</div>
+          <h3>Creative Performance Analysis</h3>
+          <p>We assess your ad creatives against industry benchmarks and identify which formats and messaging drive the highest returns.</p>
+        </div>
+        <div class="audit-feature">
+          <div class="audit-feature-icon">&#128202;</div>
+          <h3>Competitor Benchmarking</h3>
+          <p>We compare your metrics against anonymized data from our portfolio of brands in your niche, so you know exactly where you stand.</p>
+        </div>
+        <div class="audit-feature">
+          <div class="audit-feature-icon">&#128176;</div>
+          <h3>Revenue Opportunity Report</h3>
+          <p>We quantify the revenue growth available through optimization, giving you a clear picture of what's achievable with the right strategy.</p>
+        </div>
+        <div class="audit-feature">
+          <div class="audit-feature-icon">&#9881;</div>
+          <h3>Technical Setup Check</h3>
+          <p>We review your pixel implementation, Conversions API setup, and tracking accuracy to ensure you're collecting clean data for optimization.</p>
+        </div>
+        <div class="audit-feature">
+          <div class="audit-feature-icon">&#128640;</div>
+          <h3>Growth Roadmap</h3>
+          <p>We deliver a prioritized action plan with specific recommendations you can implement immediately, whether you work with us or not.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo"><img src="https://roasmedia.com/wp-content/uploads/2025/09/Roas-Logo.png" alt="ROAS Media"></a>
+          <p>Global performance marketing agency focused on Return On Ad Spend. Scaling brands profitably since 2017.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/roasmedia/" target="_blank" class="footer-social-link">in</a>
+            <a href="https://www.facebook.com/roasmedia" target="_blank" class="footer-social-link">f</a>
+            <a href="https://www.youtube.com/@roasmedia" target="_blank" class="footer-social-link">&#9654;</a>
+            <a href="https://www.instagram.com/roasmedia/" target="_blank" class="footer-social-link">ig</a>
+            <a href="https://www.tiktok.com/@roasmedia" target="_blank" class="footer-social-link">tk</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="mailto:hr@roasmedia.com">Careers</a></div>
+        <div class="footer-col"><h4>Services</h4><a href="services/meta-ads.html">Meta Ads</a><a href="services/google-ads.html">Google Ads</a><a href="services/tiktok-ads.html">TikTok Ads</a><a href="services/creative-services.html">Creative</a><a href="services/analytics-consulting.html">Analytics</a></div>
+        <div class="footer-col footer-newsletter"><h4>Stay in the Loop</h4><p>Performance marketing tips delivered to your inbox.</p><form class="newsletter-form" onsubmit="event.preventDefault();alert('Thanks for subscribing!');"><input type="email" placeholder="Your email" required><button type="submit" class="btn btn-primary btn-sm">Subscribe</button></form></div>
+      </div>
+      <div class="footer-bottom">
+        <div><p>&copy; 2026 ROAS Media. All rights reserved.</p><div class="footer-locations"><span>USA</span><span>Australia</span><span>New Zealand</span><span>Singapore</span><span>Malaysia</span></div></div>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
